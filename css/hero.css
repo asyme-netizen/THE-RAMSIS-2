@@ -1,0 +1,302 @@
+/* ============================================
+   THE RAMSIS — Hero Section
+   ============================================ */
+
+.hero-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-xl) var(--content-padding) var(--space-lg);
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+/* ---- Hero Feature (left side) ---- */
+.hero-feature {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.hero-feature__image-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  aspect-ratio: 16/10;
+  background: var(--color-light-gray);
+}
+
+.hero-feature__image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--trans-slow);
+}
+
+.hero-feature__image-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.hero-feature__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: -8px;
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  background: var(--color-tag-bg);
+  color: var(--color-mid);
+  border-radius: 2px;
+}
+
+.tag--red {
+  background: var(--color-accent-red);
+  color: var(--color-white);
+}
+
+.tag--dark {
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+.read-time {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--color-mid-gray);
+  letter-spacing: 0.02em;
+}
+
+.hero-feature__title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 46px);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+}
+
+.hero-feature__title a:hover {
+  color: var(--color-accent-red);
+}
+
+.hero-feature__excerpt {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--color-mid);
+  max-width: 560px;
+}
+
+.hero-feature__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-top: -4px;
+}
+
+.author-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-light-gray);
+  object-fit: cover;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-mid);
+  border: 1px solid var(--color-light-gray);
+}
+
+.author-name {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-mid-gray);
+}
+
+/* ---- Hero Sidebar (right side) ---- */
+.hero-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* ---- Trending Now ---- */
+.trending-now {
+  border-top: 2px solid var(--color-accent-red);
+  padding-top: var(--space-md);
+}
+
+.section-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-accent-red);
+  margin-bottom: var(--space-md);
+}
+
+.trending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.trending-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--space-sm);
+  padding: var(--space-md) 0;
+  border-bottom: var(--border-light);
+  align-items: start;
+}
+
+.trending-item:last-child {
+  border-bottom: none;
+}
+
+.trending-number {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--color-light-gray);
+  line-height: 1;
+  padding-top: 2px;
+}
+
+.trending-content {}
+
+.trending-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-black);
+  margin-bottom: 4px;
+  transition: color var(--trans-fast);
+}
+
+.trending-title:hover {
+  color: var(--color-accent-red);
+}
+
+.trending-meta {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: var(--color-mid-gray);
+}
+
+/* ---- Newsletter Widget ---- */
+.newsletter-widget {
+  background: var(--color-off-white);
+  border: var(--border-light);
+  padding: var(--space-lg);
+  border-radius: 2px;
+}
+
+.newsletter-widget__title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: var(--space-sm);
+}
+
+.newsletter-widget__desc {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--color-mid-gray);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.newsletter-widget__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.newsletter-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: var(--border-light);
+  background: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--color-black);
+  border-radius: 2px;
+  transition: border-color var(--trans-fast);
+}
+
+.newsletter-input::placeholder {
+  color: var(--color-mid-gray);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.newsletter-input:focus {
+  border-color: var(--color-accent-red);
+}
+
+.btn-dispatch {
+  width: 100%;
+  background: var(--color-accent-red);
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 11px;
+  border-radius: 2px;
+  transition: background var(--trans-fast), transform var(--trans-fast);
+}
+
+.btn-dispatch:hover {
+  background: var(--color-accent-dark);
+  transform: translateY(-1px);
+}
+
+/* ---- Section Divider ---- */
+.section-divider {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  border-top: var(--border-light);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .hero-section {
+    grid-template-columns: 1fr 320px;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .hero-feature__title {
+    font-size: 32px;
+  }
+}
