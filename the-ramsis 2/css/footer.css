@@ -1,0 +1,138 @@
+/* ============================================
+   THE RAMSIS — Footer
+   ============================================ */
+
+.site-footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding-top: var(--space-3xl);
+}
+
+.site-footer__main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding) var(--space-2xl);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+/* ---- Footer Brand ---- */
+.footer-brand {}
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  display: block;
+  margin-bottom: var(--space-md);
+}
+
+.footer-mission {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+  max-width: 280px;
+}
+
+/* ---- Footer Columns ---- */
+.footer-column__heading {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: var(--space-lg);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer-links a {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.65);
+  transition: color var(--trans-fast);
+}
+
+.footer-links a:hover {
+  color: var(--color-white);
+}
+
+/* ---- Footer Bottom ---- */
+.site-footer__bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.site-footer__bottom-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-md) var(--content-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.footer-copyright {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  color: rgba(255,255,255,0.28);
+  letter-spacing: 0.02em;
+}
+
+.footer-legal {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.footer-legal a {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  transition: color var(--trans-fast);
+}
+
+.footer-legal a:hover {
+  color: var(--color-white);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .site-footer__main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-footer__main {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .site-footer__bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}
